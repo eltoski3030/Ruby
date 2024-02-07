@@ -66,3 +66,15 @@ end
 
 puts "Another way to iterate throught a hash"
 lunch_order.each {|key,value|puts value}
+
+
+colors = { 
+  "blue" => 3,
+  "green" => 1,
+  "red" => 2
+}
+colors = colors.sort_by do |color, count|
+  count
+end
+colors.reverse!
+puts colors
