@@ -17,7 +17,6 @@ while true
         puts "What's your email?"
         email = gets.chomp
 
-        # Create a new contact hash here, inside the loop, with the current input values
         new_contact = { name: name, phone: phone, email: email }
         contacts.push(new_contact)
 
