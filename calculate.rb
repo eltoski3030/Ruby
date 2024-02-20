@@ -1,10 +1,10 @@
-# Define lambdas for area calculations
+
 circle_area = ->(radius) { Math::PI * radius**2 }
 rectangle_area = ->(length, width) { length * width }
 triangle_area = ->(base, height) { 0.5 * base * height }
 
-# Define a method to interact with the user and perform calculations
-def calculate_area
+
+def calculate_area(circle_area, rectangle_area, triangle_area)
   puts "Choose a shape to calculate the area:"
   puts "1. Circle"
   puts "2. Rectangle"
@@ -37,5 +37,5 @@ def calculate_area
   end
 end
 
-# Call the method to start the program
-calculate_area
+
+calculate_area(circle_area, rectangle_area, triangle_area)
