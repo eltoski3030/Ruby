@@ -72,3 +72,47 @@ calculate_average = Proc.new do |array|
   max_value = find_max(array, max_num)
   puts max_value  # Output: 7
   
+
+  puts "Enter first argument:"
+  arg1 = gets.chomp.to_i  
+  puts "Enter second argument:"
+  arg2 = gets.chomp.to_i  
+  
+  def sumi(arg1, arg2, lambda)
+      args = [arg1, arg2]
+      result = lambda.call(args)
+      return result
+  end
+  
+  sum_lambda = lambda {|x| x.reduce(0) { |total, num| total + num }}
+    
+  puts "Sum of the arguments: #{sumi(arg1, arg2, sum_lambda)}"
+  
+  
+  numbers_array = []
+
+loop do
+  puts "Enter a number or type 'exit' to finish:"
+  input = gets.chomp
+  
+  if input.downcase == "exit"
+    break
+  elsif input.match?(/\A-?\d+\z/)
+    numbers_array << input.to_i
+    puts "Number added!"
+  else
+    puts "Invalid input. Please enter a number or type 'exit'."
+  end
+end
+
+def ifEven(array,lambda)
+    array.select(&lambda)
+end
+
+even_lambda = lambda {|x| x.even?}
+
+puts "This are the even numbers in your array #{ifEven(numbers_array,even_lambda)}"
+
+puts "Numbers entered: #{numbers_array.sort!}"
+
+
