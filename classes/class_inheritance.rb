@@ -8,7 +8,7 @@ class Creature
     end
   end
   
-  # Add your code below!
+ 
   
   class Dragon < Creature
     def fight #this is an overwrite
