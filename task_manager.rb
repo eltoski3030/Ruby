@@ -1,4 +1,4 @@
-# first Add a loggin
+
 class User
     attr_accessor :name, :password, :email
     @@login_counter = 0
@@ -97,16 +97,4 @@ if authenticated_user
     puts "Username or Password incorrect."
   end
 
-    
-
-# Adding task
-
-
-
-
-
-
-
-# Create a task to do array 
-# Create done task array
 
